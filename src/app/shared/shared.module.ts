@@ -5,8 +5,9 @@ import { MatrialModule } from './matrial.module';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
-
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -16,16 +17,21 @@ import { RouterModule } from '@angular/router';
     MatrialModule,
     CommonModule,
     HttpClientModule,
+    ReactiveFormsModule,
     RouterModule,
-    BrowserModule
+    BrowserModule,
+    ToastrModule.forRoot(),
+    BrowserAnimationsModule
   ],
   exports:[
     HttpClientModule,
+    ReactiveFormsModule,
     BrowserModule,
     RouterModule,
     MatrialModule,
     CommonModule,
-    NavbarComponent
+    NavbarComponent,
+    BrowserAnimationsModule
   ]
 })
 export class SharedModule { }

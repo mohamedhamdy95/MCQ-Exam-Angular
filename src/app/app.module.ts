@@ -8,6 +8,8 @@ import { AuthModule } from './auth/auth.module';
 import { DoctorModule } from './doctor/doctor.module';
 import { SharedModule } from './shared/shared.module';
 import { StudentModule } from './student/student.module';
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -15,10 +17,12 @@ import { StudentModule } from './student/student.module';
   imports: [
     AppRoutingModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
     AuthModule,
     DoctorModule,
     SharedModule,
-    StudentModule
+    StudentModule,
+
     ],
   providers: [],
   bootstrap: [AppComponent]
